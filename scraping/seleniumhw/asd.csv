@@ -1,0 +1,22 @@
+def write_csv(result):
+    with open('Wb-s.csv', 'w') as file:
+        fieldnames = ['#', 'title', 'price', 'discount', 'img', 'reviews', 'rating']
+        writer = csv.DictWriter(file, fieldnames)
+        writer.writeheader()
+        for index, laptop in enumerate(result, start=1):
+            writer.writerow({
+                '#': index,
+                'title': laptop['title'],
+                'price': laptop['price'],
+                'discount': laptop['discount'],
+                'img': laptop['img'],
+                'reviews': laptop['reviews'],
+                'rating': laptop['rating']
+            })
+
+i = 1
+while i <= 10:
+    page_url = f'https://global.wildberries.ru/catalog?category=9492&page={i}'
+    write_csv(result)
+    print(f'Спарсили {i}/{10} pages!')
+    i+=1

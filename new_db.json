@@ -1,0 +1,19 @@
+[
+    {
+        "name": "a",
+        "rating": 1,
+        "description": "Описание продукта"
+    },
+    {
+        "name": "b",
+        "rating": 2,
+        "description": "Описание продукта"
+    },
+    {
+        "id": "12",
+        "title": "s",
+        "description": "zxc",
+        "price": "45",
+        "rating": "99"
+    }
+]
